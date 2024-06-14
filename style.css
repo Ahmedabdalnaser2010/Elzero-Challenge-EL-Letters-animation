@@ -1,0 +1,176 @@
+.parent {
+    width: 550px;
+    height: 550px;
+    background-color: #eee;
+    display: grid;
+    margin: 50px auto;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+
+}
+
+.one {
+    background-color: black;
+    grid-column: 2/span 4
+}
+
+.two {
+    background-color: black;
+    grid-row: 1/span 11
+}
+
+.three {
+    background-color: black;
+    grid-area: 6 /2/ 6/ 6;
+}
+
+.four {
+    background-color: black;
+    grid-area: 11 /2/ 11/ 6;
+}
+
+.five {
+    background-color: black;
+    grid-area: 1 /7/ 11/ 7;
+}
+
+.six {
+    background-color: black;
+    grid-area: 11 /7/ 11/ 12;
+}
+
+.seven {
+    background-color: rgb(255, 183, 0);
+    width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: -5px;
+    left: -50px;
+    animation-name: snake;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+
+}
+
+.eight {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: -505px;
+    left: 150px;
+    animation-name: snake-two;
+    animation-delay: 3s;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+
+
+}
+
+@keyframes snake {
+    5% {
+        transform: translate(-200px, 0);
+        -webkit-transform: translate(-200px, 0);
+        -moz-transform: translate(-200px, 0);
+        -ms-transform: translate(-200px, 0);
+        -o-transform: translate(-200px, 0);
+    }
+
+    10% {
+        transform: translate(-200px, 250px);
+        -webkit-transform: translate(-200px, 250px);
+        -moz-transform: translate(-200px, 250px);
+        -ms-transform: translate(-200px, 250px);
+        -o-transform: translate(-200px, 250px);
+    }
+
+    15% {
+        transform: translate(0, 250px);
+        -webkit-transform: translate(0, 250px);
+        -moz-transform: translate(0, 250px);
+        -ms-transform: translate(0, 250px);
+        -o-transform: translate(0, 250px);
+    }
+
+    20% {
+        transform: translate(-200px, 250px);
+        -webkit-transform: translate(-200px, 250px);
+        -moz-transform: translate(-200px, 250px);
+        -ms-transform: translate(-200px, 250px);
+        -o-transform: translate(-200px, 250px);
+    }
+
+    25% {
+        transform: translate(-200px, 500px);
+        -webkit-transform: translate(-200px, 500px);
+        -moz-transform: translate(-200px, 500px);
+        -ms-transform: translate(-200px, 500px);
+        -o-transform: translate(-200px, 500px);
+    }
+
+    30% {
+        transform: translate(0, 500px);
+        -webkit-transform: translate(0, 500px);
+        -moz-transform: translate(0, 500px);
+        -ms-transform: translate(0, 500px);
+        -o-transform: translate(0, 500px);
+    }
+
+    40% {
+        transform: translate(-200px, 500px);
+        -webkit-transform: translate(-200px, 500px);
+        -moz-transform: translate(-200px, 500px);
+        -ms-transform: translate(-200px, 500px);
+        -o-transform: translate(-200px, 500px);
+    }
+
+    50% {
+        transform: translate(-200px, 0);
+        -webkit-transform: translate(-200px, 0);
+        -moz-transform: translate(-200px, 0);
+        -ms-transform: translate(-200px, 0);
+        -o-transform: translate(-200px, 0);
+    }
+
+    60% {
+        transform: translate(0, -0);
+        -webkit-transform: translate(0, -0);
+        -moz-transform: translate(0, -0);
+        -ms-transform: translate(0, -0);
+        -o-transform: translate(0, -0);
+    }
+}
+
+@keyframes snake-two {
+
+    20% {
+        background-color: rgb(255, 183, 0);
+        transform: translate(-200px, 0PX);
+        -webkit-transform: translate(-200px, 0PX);
+        -moz-transform: translate(-200px, 0PX);
+        -ms-transform: translate(-200px, 0PX);
+        -o-transform: translate(-200px, 0PX);
+    }
+
+    50% {
+        background-color: rgb(255, 183, 0);
+        transform: translate(-195px, -505px);
+        -webkit-transform: translate(-195px, -505px);
+        -moz-transform: translate(-195px, -505px);
+        -ms-transform: translate(-195px, -505px);
+        -o-transform: translate(-195px, -505px);
+    }
+
+    100% {
+        background-color: transparent;
+        transform: translate(-195px, -505px);
+        -webkit-transform: translate(-195px, -505px);
+        -moz-transform: translate(-195px, -505px);
+        -ms-transform: translate(-195px, -505px);
+        -o-transform: translate(-195px, -505px);
+    }
+}
